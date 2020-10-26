@@ -1,6 +1,7 @@
 # Helper functions for printing all properties
 
-Provides two functions to print all cmake properties
+Similar to [CMakePrintHelpers](https://cmake.org/cmake/help/latest/module/CMakePrintHelpers.html)
+but it provides two functions to print all cmake properties
 or all properties of a particular target.
 From [this answer](https://stackoverflow.com/a/34292622) for
 [this stackoverlow](https://stackoverflow.com/questions/32183975/how-to-print-all-the-properties-of-a-target-in-cmake) question.
