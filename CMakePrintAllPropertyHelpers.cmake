@@ -4,9 +4,10 @@
 # Get all propreties that cmake supports
 execute_process(COMMAND cmake --help-property-list OUTPUT_VARIABLE CMAKE_PROPERTY_LIST)
 
-# Convert command output into a CMake list
+# Convert command output into a CMake list and remove duplicates
 STRING(REGEX REPLACE ";" "\\\\;" CMAKE_PROPERTY_LIST "${CMAKE_PROPERTY_LIST}")
 STRING(REGEX REPLACE "\n" ";" CMAKE_PROPERTY_LIST "${CMAKE_PROPERTY_LIST}")
+list(REMOVE_DUPLICATES CMAKE_PROPERTY_LIST)
 
 # Print all properties
 function(print_properties)
